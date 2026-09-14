@@ -1,0 +1,301 @@
+organization_id,source_system,source_record_id,company_id,company_name,industry,region,employee_count,annual_revenue_usd,lifecycle_stage,source_updated_at,ingested_at,normalized_at
+org_northstar_001,hubspot,hub_company_1,cmp_0001,Company 0001,Professional Services,North America,47,3964418.26,customer,2025-04-25T12:00:00Z,2025-04-25T12:05:00Z,2025-04-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_2,cmp_0002,Company 0002,Technology,North America,43,4410618.58,customer,2026-07-13T12:00:00Z,2026-07-13T12:05:00Z,2026-07-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_3,cmp_0003,Company 0003,Manufacturing,North America,36,4784013.59,prospect,2026-07-29T12:00:00Z,2026-07-29T12:05:00Z,2026-07-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_4,cmp_0004,Company 0004,Retail,North America,163,14958042.19,churned,2025-01-07T12:00:00Z,2025-01-07T12:05:00Z,2025-01-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_5,cmp_0005,Company 0005,Healthcare,Asia Pacific,48,7417038.93,customer,2025-12-11T12:00:00Z,2025-12-11T12:05:00Z,2025-12-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_6,cmp_0006,Company 0006,Retail,North America,622,69069964.74,customer,2026-04-16T12:00:00Z,2026-04-16T12:05:00Z,2026-04-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_7,cmp_0007,Company 0007,Technology,Europe,153,27269123.86,churned,2026-01-06T12:00:00Z,2026-01-06T12:05:00Z,2026-01-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_8,cmp_0008,Company 0008,Retail,Europe,235,28452978.69,prospect,2025-08-27T12:00:00Z,2025-08-27T12:05:00Z,2025-08-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_9,cmp_0009,Company 0009,Financial Services,Europe,229,35558740.04,lead,2025-08-03T12:00:00Z,2025-08-03T12:05:00Z,2025-08-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_10,cmp_0010,Company 0010,Financial Services,Europe,54,5440290.72,prospect,2025-09-08T12:00:00Z,2025-09-08T12:05:00Z,2025-09-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_11,cmp_0011,Company 0011,Professional Services,Asia Pacific,79,11803011.37,customer,2025-02-27T12:00:00Z,2025-02-27T12:05:00Z,2025-02-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_12,cmp_0012,Company 0012,Financial Services,North America,153,16383733.17,prospect,2025-08-06T12:00:00Z,2025-08-06T12:05:00Z,2025-08-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_13,cmp_0013,Company 0013,Retail,Asia Pacific,134,16872753.48,prospect,2026-07-29T12:00:00Z,2026-07-29T12:05:00Z,2026-07-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_14,cmp_0014,Company 0014,Technology,Asia Pacific,111,10145154.1,lead,2025-05-22T12:00:00Z,2025-05-22T12:05:00Z,2025-05-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_15,cmp_0015,Company 0015,Manufacturing,Latin America,134,19306185.11,churned,2026-03-09T12:00:00Z,2026-03-09T12:05:00Z,2026-03-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_16,cmp_0016,Company 0016,Manufacturing,Asia Pacific,142,25219742.81,prospect,2025-01-12T12:00:00Z,2025-01-12T12:05:00Z,2025-01-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_17,cmp_0017,Company 0017,Financial Services,Asia Pacific,94,10046199.91,customer,2025-10-28T12:00:00Z,2025-10-28T12:05:00Z,2025-10-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_18,cmp_0018,Company 0018,Financial Services,North America,111,17699275.15,customer,2025-07-02T12:00:00Z,2025-07-02T12:05:00Z,2025-07-02T12:10:00Z
+org_northstar_001,hubspot,hub_company_19,cmp_0019,Company 0019,Education,Asia Pacific,90,17873018.03,customer,2025-06-06T12:00:00Z,2025-06-06T12:05:00Z,2025-06-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_20,cmp_0020,Company 0020,Manufacturing,Latin America,84,6887284.6,customer,2026-05-16T12:00:00Z,2026-05-16T12:05:00Z,2026-05-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_21,cmp_0021,Company 0021,Manufacturing,North America,26,3740732.59,customer,2025-03-12T12:00:00Z,2025-03-12T12:05:00Z,2025-03-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_22,cmp_0022,Company 0022,Retail,Latin America,257,41372612.51,prospect,2025-08-05T12:00:00Z,2025-08-05T12:05:00Z,2025-08-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_23,cmp_0023,Company 0023,Technology,North America,101,15388685.28,prospect,2026-06-14T12:00:00Z,2026-06-14T12:05:00Z,2026-06-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_24,cmp_0024,Company 0024,Manufacturing,North America,44,7200903.11,prospect,2025-08-14T12:00:00Z,2025-08-14T12:05:00Z,2025-08-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_25,cmp_0025,Company 0025,Retail,Asia Pacific,125,12082173.5,lead,2025-05-16T12:00:00Z,2025-05-16T12:05:00Z,2025-05-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_26,cmp_0026,Company 0026,Education,Europe,79,12977411.89,churned,2026-03-18T12:00:00Z,2026-03-18T12:05:00Z,2026-03-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_27,cmp_0027,Company 0027,Professional Services,North America,169,22444196.54,prospect,2025-04-11T12:00:00Z,2025-04-11T12:05:00Z,2025-04-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_28,cmp_0028,Company 0028,Technology,North America,74,14103576.73,customer,2025-10-13T12:00:00Z,2025-10-13T12:05:00Z,2025-10-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_29,cmp_0029,Company 0029,Technology,Latin America,168,33548151.44,customer,2025-02-21T12:00:00Z,2025-02-21T12:05:00Z,2025-02-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_30,cmp_0030,Company 0030,Education,North America,87,6804179.17,prospect,2025-06-20T12:00:00Z,2025-06-20T12:05:00Z,2025-06-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_31,cmp_0031,Company 0031,Retail,North America,27,4523115.88,customer,2026-02-04T12:00:00Z,2026-02-04T12:05:00Z,2026-02-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_32,cmp_0032,Company 0032,Professional Services,North America,164,33721567.02,customer,2026-07-24T12:00:00Z,2026-07-24T12:05:00Z,2026-07-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_33,cmp_0033,Company 0033,Technology,Europe,48,6739154.57,customer,2026-07-10T12:00:00Z,2026-07-10T12:05:00Z,2026-07-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_34,cmp_0034,Company 0034,Education,North America,34,5212367.11,customer,2025-06-11T12:00:00Z,2025-06-11T12:05:00Z,2025-06-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_35,cmp_0035,Company 0035,Manufacturing,North America,13,1992024.86,customer,2025-08-29T12:00:00Z,2025-08-29T12:05:00Z,2025-08-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_36,cmp_0036,Company 0036,Healthcare,Latin America,175,17254350.39,customer,2026-03-06T12:00:00Z,2026-03-06T12:05:00Z,2026-03-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_37,cmp_0037,Company 0037,Financial Services,North America,77,8798390.18,customer,2025-09-02T12:00:00Z,2025-09-02T12:05:00Z,2025-09-02T12:10:00Z
+org_northstar_001,hubspot,hub_company_38,cmp_0038,Company 0038,Manufacturing,North America,120,12855366.97,churned,2025-03-16T12:00:00Z,2025-03-16T12:05:00Z,2025-03-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_39,cmp_0039,Company 0039,Professional Services,North America,238,34760022.5,prospect,2025-03-12T12:00:00Z,2025-03-12T12:05:00Z,2025-03-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_40,cmp_0040,Company 0040,Professional Services,North America,51,9922548.73,customer,2026-06-26T12:00:00Z,2026-06-26T12:05:00Z,2026-06-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_41,cmp_0041,Company 0041,Financial Services,North America,52,8644979.1,customer,2025-06-09T12:00:00Z,2025-06-09T12:05:00Z,2025-06-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_42,cmp_0042,Company 0042,Education,North America,94,14927183.33,customer,2026-06-02T12:00:00Z,2026-06-02T12:05:00Z,2026-06-02T12:10:00Z
+org_northstar_001,hubspot,hub_company_43,cmp_0043,Company 0043,Financial Services,North America,139,23462288.51,customer,2025-02-15T12:00:00Z,2025-02-15T12:05:00Z,2025-02-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_44,cmp_0044,Company 0044,Education,North America,345,50836962.17,prospect,2025-04-25T12:00:00Z,2025-04-25T12:05:00Z,2025-04-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_45,cmp_0045,Company 0045,Professional Services,Europe,210,25098151.86,customer,2025-02-12T12:00:00Z,2025-02-12T12:05:00Z,2025-02-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_46,cmp_0046,Company 0046,Professional Services,Latin America,225,41289309.18,customer,2026-02-21T12:00:00Z,2026-02-21T12:05:00Z,2026-02-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_47,cmp_0047,Company 0047,Financial Services,Asia Pacific,203,37251495.58,prospect,2025-01-26T12:00:00Z,2025-01-26T12:05:00Z,2025-01-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_48,cmp_0048,Company 0048,Retail,North America,93,17141957.6,customer,2025-04-21T12:00:00Z,2025-04-21T12:05:00Z,2025-04-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_49,cmp_0049,Company 0049,Retail,North America,38,7258357.65,churned,2025-11-09T12:00:00Z,2025-11-09T12:05:00Z,2025-11-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_50,cmp_0050,Company 0050,Financial Services,Latin America,74,10735194.99,churned,2025-10-13T12:00:00Z,2025-10-13T12:05:00Z,2025-10-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_51,cmp_0051,Company 0051,Manufacturing,Latin America,212,22719041.64,lead,2025-04-29T12:00:00Z,2025-04-29T12:05:00Z,2025-04-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_52,cmp_0052,Company 0052,Retail,Europe,43,6088766.82,prospect,2026-03-21T12:00:00Z,2026-03-21T12:05:00Z,2026-03-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_53,cmp_0053,Company 0053,Education,North America,92,15706258.39,customer,2026-08-14T12:00:00Z,2026-08-14T12:05:00Z,2026-08-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_54,cmp_0054,Company 0054,Financial Services,Asia Pacific,91,14308999.92,customer,2025-07-21T12:00:00Z,2025-07-21T12:05:00Z,2025-07-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_55,cmp_0055,Company 0055,Healthcare,Europe,164,18969159.5,customer,2025-05-08T12:00:00Z,2025-05-08T12:05:00Z,2025-05-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_56,cmp_0056,Company 0056,Retail,Europe,48,9426853.27,customer,2026-07-22T12:00:00Z,2026-07-22T12:05:00Z,2026-07-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_57,cmp_0057,Company 0057,Healthcare,North America,53,6899770.07,customer,2025-11-05T12:00:00Z,2025-11-05T12:05:00Z,2025-11-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_58,cmp_0058,Company 0058,Professional Services,North America,101,18293418.54,churned,2025-11-26T12:00:00Z,2025-11-26T12:05:00Z,2025-11-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_59,cmp_0059,Company 0059,Financial Services,Europe,146,17071247.94,customer,2025-06-23T12:00:00Z,2025-06-23T12:05:00Z,2025-06-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_60,cmp_0060,Company 0060,Professional Services,North America,146,11164608.4,churned,2025-08-29T12:00:00Z,2025-08-29T12:05:00Z,2025-08-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_61,cmp_0061,Company 0061,Manufacturing,North America,66,11054313.27,customer,2025-03-16T12:00:00Z,2025-03-16T12:05:00Z,2025-03-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_62,cmp_0062,Company 0062,Education,Asia Pacific,25,4849128.22,customer,2025-09-07T12:00:00Z,2025-09-07T12:05:00Z,2025-09-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_63,cmp_0063,Company 0063,Professional Services,Asia Pacific,112,9742902.84,lead,2025-08-13T12:00:00Z,2025-08-13T12:05:00Z,2025-08-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_64,cmp_0064,Company 0064,Retail,Europe,1284,219176687.28,customer,2026-04-21T12:00:00Z,2026-04-21T12:05:00Z,2026-04-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_65,cmp_0065,Company 0065,Education,North America,101,10734968.5,prospect,2026-07-16T12:00:00Z,2026-07-16T12:05:00Z,2026-07-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_66,cmp_0066,Company 0066,Financial Services,North America,224,29474404.52,customer,2025-10-11T12:00:00Z,2025-10-11T12:05:00Z,2025-10-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_67,cmp_0067,Company 0067,Manufacturing,North America,71,6469256.74,prospect,2025-08-29T12:00:00Z,2025-08-29T12:05:00Z,2025-08-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_68,cmp_0068,Company 0068,Retail,North America,146,19743492.76,lead,2025-06-06T12:00:00Z,2025-06-06T12:05:00Z,2025-06-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_69,cmp_0069,Company 0069,Financial Services,North America,59,11404224.12,customer,2026-03-07T12:00:00Z,2026-03-07T12:05:00Z,2026-03-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_70,cmp_0070,Company 0070,Education,North America,41,7988022.45,customer,2026-05-04T12:00:00Z,2026-05-04T12:05:00Z,2026-05-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_71,cmp_0071,Company 0071,Manufacturing,Asia Pacific,221,30575820.04,prospect,2026-07-06T12:00:00Z,2026-07-06T12:05:00Z,2026-07-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_72,cmp_0072,Company 0072,Financial Services,Asia Pacific,44,7540957.29,customer,2026-05-13T12:00:00Z,2026-05-13T12:05:00Z,2026-05-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_73,cmp_0073,Company 0073,Financial Services,North America,396,63354040.49,lead,2025-05-11T12:00:00Z,2025-05-11T12:05:00Z,2025-05-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_74,cmp_0074,Company 0074,Healthcare,North America,63,7292780.0,customer,2026-04-18T12:00:00Z,2026-04-18T12:05:00Z,2026-04-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_75,cmp_0075,Company 0075,Retail,North America,59,8585601.34,churned,2026-01-24T12:00:00Z,2026-01-24T12:05:00Z,2026-01-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_76,cmp_0076,Company 0076,Financial Services,North America,75,5575814.99,prospect,2025-12-25T12:00:00Z,2025-12-25T12:05:00Z,2025-12-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_77,cmp_0077,Company 0077,Retail,Europe,134,19960069.36,prospect,2025-01-21T12:00:00Z,2025-01-21T12:05:00Z,2025-01-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_78,cmp_0078,Company 0078,Manufacturing,Latin America,166,28314621.99,customer,2025-09-20T12:00:00Z,2025-09-20T12:05:00Z,2025-09-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_79,cmp_0079,Company 0079,Financial Services,Asia Pacific,45,5514433.84,churned,2025-06-17T12:00:00Z,2025-06-17T12:05:00Z,2025-06-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_80,cmp_0080,Company 0080,Education,North America,131,21719310.78,customer,2025-07-23T12:00:00Z,2025-07-23T12:05:00Z,2025-07-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_81,cmp_0081,Company 0081,Retail,Europe,191,15213903.13,customer,2026-08-03T12:00:00Z,2026-08-03T12:05:00Z,2026-08-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_82,cmp_0082,Company 0082,Financial Services,North America,304,28776389.06,customer,2025-01-13T12:00:00Z,2025-01-13T12:05:00Z,2025-01-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_83,cmp_0083,Company 0083,Education,North America,703,92079241.6,customer,2025-10-04T12:00:00Z,2025-10-04T12:05:00Z,2025-10-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_84,cmp_0084,Company 0084,Technology,North America,81,10782094.68,customer,2025-10-02T12:00:00Z,2025-10-02T12:05:00Z,2025-10-02T12:10:00Z
+org_northstar_001,hubspot,hub_company_85,cmp_0085,Company 0085,Technology,North America,138,15939273.72,customer,2026-08-07T12:00:00Z,2026-08-07T12:05:00Z,2026-08-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_86,cmp_0086,Company 0086,Manufacturing,Europe,196,21300809.72,lead,2025-12-30T12:00:00Z,2025-12-30T12:05:00Z,2025-12-30T12:10:00Z
+org_northstar_001,hubspot,hub_company_87,cmp_0087,Company 0087,Financial Services,North America,103,17474767.5,prospect,2025-07-15T12:00:00Z,2025-07-15T12:05:00Z,2025-07-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_88,cmp_0088,Company 0088,Financial Services,North America,56,9125446.57,prospect,2025-01-18T12:00:00Z,2025-01-18T12:05:00Z,2025-01-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_89,cmp_0089,Company 0089,Financial Services,Europe,117,13952656.44,customer,2026-07-21T12:00:00Z,2026-07-21T12:05:00Z,2026-07-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_90,cmp_0090,Company 0090,Professional Services,North America,76,13224254.52,churned,2025-11-10T12:00:00Z,2025-11-10T12:05:00Z,2025-11-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_91,cmp_0091,Company 0091,Healthcare,Europe,24,4961399.6,customer,2025-07-09T12:00:00Z,2025-07-09T12:05:00Z,2025-07-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_92,cmp_0092,Company 0092,Healthcare,North America,72,10424081.7,prospect,2025-10-17T12:00:00Z,2025-10-17T12:05:00Z,2025-10-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_93,cmp_0093,Company 0093,Professional Services,Europe,137,24028553.93,lead,2025-02-25T12:00:00Z,2025-02-25T12:05:00Z,2025-02-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_94,cmp_0094,Company 0094,Retail,North America,131,26877226.78,prospect,2025-01-13T12:00:00Z,2025-01-13T12:05:00Z,2025-01-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_95,cmp_0095,Company 0095,Financial Services,North America,107,9724979.82,customer,2026-05-05T12:00:00Z,2026-05-05T12:05:00Z,2026-05-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_96,cmp_0096,Company 0096,Manufacturing,Asia Pacific,54,8363761.44,customer,2025-11-08T12:00:00Z,2025-11-08T12:05:00Z,2025-11-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_97,cmp_0097,Company 0097,Retail,North America,194,29564342.77,prospect,2025-08-20T12:00:00Z,2025-08-20T12:05:00Z,2025-08-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_98,cmp_0098,Company 0098,Financial Services,North America,163,28815660.72,customer,2026-08-06T12:00:00Z,2026-08-06T12:05:00Z,2026-08-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_99,cmp_0099,Company 0099,Professional Services,Europe,140,12868039.26,prospect,2025-09-28T12:00:00Z,2025-09-28T12:05:00Z,2025-09-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_100,cmp_0100,Company 0100,Financial Services,North America,77,14656560.56,lead,2026-04-27T12:00:00Z,2026-04-27T12:05:00Z,2026-04-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_101,cmp_0101,Company 0101,Professional Services,North America,176,25738017.01,customer,2025-08-28T12:00:00Z,2025-08-28T12:05:00Z,2025-08-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_102,cmp_0102,Company 0102,Financial Services,Asia Pacific,59,11739050.29,prospect,2025-09-30T12:00:00Z,2025-09-30T12:05:00Z,2025-09-30T12:10:00Z
+org_northstar_001,hubspot,hub_company_103,cmp_0103,Company 0103,Healthcare,North America,246,34226307.35,lead,2026-04-25T12:00:00Z,2026-04-25T12:05:00Z,2026-04-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_104,cmp_0104,Company 0104,Professional Services,Latin America,126,23566309.95,customer,2025-02-10T12:00:00Z,2025-02-10T12:05:00Z,2025-02-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_105,cmp_0105,Company 0105,Financial Services,North America,204,22224151.71,churned,2025-01-22T12:00:00Z,2025-01-22T12:05:00Z,2025-01-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_106,cmp_0106,Company 0106,Technology,North America,154,19583984.89,prospect,2026-03-23T12:00:00Z,2026-03-23T12:05:00Z,2026-03-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_107,cmp_0107,Company 0107,Financial Services,North America,218,35482049.55,prospect,2025-04-18T12:00:00Z,2025-04-18T12:05:00Z,2025-04-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_108,cmp_0108,Company 0108,Education,North America,76,10795304.12,churned,2026-07-18T12:00:00Z,2026-07-18T12:05:00Z,2026-07-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_109,cmp_0109,Company 0109,Manufacturing,North America,104,18293812.32,customer,2026-07-10T12:00:00Z,2026-07-10T12:05:00Z,2026-07-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_110,cmp_0110,Company 0110,Healthcare,North America,47,7884485.19,lead,2025-02-22T12:00:00Z,2025-02-22T12:05:00Z,2025-02-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_111,cmp_0111,Company 0111,Technology,Europe,162,13453984.69,churned,2025-09-03T12:00:00Z,2025-09-03T12:05:00Z,2025-09-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_112,cmp_0112,Company 0112,Education,North America,103,20658857.12,prospect,2025-04-27T12:00:00Z,2025-04-27T12:05:00Z,2025-04-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_113,cmp_0113,Company 0113,Retail,North America,89,13098762.86,prospect,2025-10-07T12:00:00Z,2025-10-07T12:05:00Z,2025-10-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_114,cmp_0114,Company 0114,Technology,North America,158,28534936.75,prospect,2026-06-05T12:00:00Z,2026-06-05T12:05:00Z,2026-06-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_115,cmp_0115,Company 0115,Manufacturing,Latin America,658,91165668.73,lead,2026-06-04T12:00:00Z,2026-06-04T12:05:00Z,2026-06-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_116,cmp_0116,Company 0116,Education,North America,106,14177314.11,prospect,2026-07-06T12:00:00Z,2026-07-06T12:05:00Z,2026-07-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_117,cmp_0117,Company 0117,Retail,North America,38,6621831.41,customer,2025-07-13T12:00:00Z,2025-07-13T12:05:00Z,2025-07-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_118,cmp_0118,Company 0118,Education,Europe,71,6481926.88,churned,2026-01-26T12:00:00Z,2026-01-26T12:05:00Z,2026-01-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_119,cmp_0119,Company 0119,Education,North America,110,20713607.12,lead,2025-05-10T12:00:00Z,2025-05-10T12:05:00Z,2025-05-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_120,cmp_0120,Company 0120,Retail,Europe,49,9273109.91,customer,2026-04-13T12:00:00Z,2026-04-13T12:05:00Z,2026-04-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_121,cmp_0121,Company 0121,Financial Services,Asia Pacific,87,12033200.37,customer,2026-07-01T12:00:00Z,2026-07-01T12:05:00Z,2026-07-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_122,cmp_0122,Company 0122,Healthcare,Latin America,37,6458249.78,prospect,2025-03-12T12:00:00Z,2025-03-12T12:05:00Z,2025-03-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_123,cmp_0123,Company 0123,Technology,North America,340,56834455.35,churned,2025-04-11T12:00:00Z,2025-04-11T12:05:00Z,2025-04-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_124,cmp_0124,Company 0124,Healthcare,North America,86,7772660.34,customer,2025-02-17T12:00:00Z,2025-02-17T12:05:00Z,2025-02-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_125,cmp_0125,Company 0125,Professional Services,North America,146,28019961.4,customer,2026-08-03T12:00:00Z,2026-08-03T12:05:00Z,2026-08-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_126,cmp_0126,Company 0126,Professional Services,North America,109,11505694.2,prospect,2025-09-04T12:00:00Z,2025-09-04T12:05:00Z,2025-09-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_127,cmp_0127,Company 0127,Healthcare,Europe,287,26437460.49,prospect,2025-01-10T12:00:00Z,2025-01-10T12:05:00Z,2025-01-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_128,cmp_0128,Company 0128,Retail,Asia Pacific,101,8578077.2,prospect,2025-12-20T12:00:00Z,2025-12-20T12:05:00Z,2025-12-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_129,cmp_0129,Company 0129,Manufacturing,Asia Pacific,145,25949725.8,churned,2026-01-03T12:00:00Z,2026-01-03T12:05:00Z,2026-01-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_130,cmp_0130,Company 0130,Education,North America,174,27688011.51,customer,2026-05-24T12:00:00Z,2026-05-24T12:05:00Z,2026-05-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_131,cmp_0131,Company 0131,Financial Services,North America,606,109325713.46,lead,2025-05-21T12:00:00Z,2025-05-21T12:05:00Z,2025-05-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_132,cmp_0132,Company 0132,Healthcare,North America,152,19481905.83,prospect,2026-01-09T12:00:00Z,2026-01-09T12:05:00Z,2026-01-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_133,cmp_0133,Company 0133,Manufacturing,Asia Pacific,235,43772549.18,prospect,2026-07-07T12:00:00Z,2026-07-07T12:05:00Z,2026-07-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_134,cmp_0134,Company 0134,Education,North America,258,22219929.83,churned,2026-05-09T12:00:00Z,2026-05-09T12:05:00Z,2026-05-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_135,cmp_0135,Company 0135,Financial Services,Europe,167,34601049.64,churned,2025-05-25T12:00:00Z,2025-05-25T12:05:00Z,2025-05-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_136,cmp_0136,Company 0136,Technology,North America,48,4190516.31,prospect,2026-07-25T12:00:00Z,2026-07-25T12:05:00Z,2026-07-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_137,cmp_0137,Company 0137,Healthcare,North America,202,20752483.39,lead,2025-09-26T12:00:00Z,2025-09-26T12:05:00Z,2025-09-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_138,cmp_0138,Company 0138,Financial Services,North America,62,11491064.45,churned,2026-07-29T12:00:00Z,2026-07-29T12:05:00Z,2026-07-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_139,cmp_0139,Company 0139,Technology,Latin America,136,15315101.69,customer,2025-11-06T12:00:00Z,2025-11-06T12:05:00Z,2025-11-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_140,cmp_0140,Company 0140,Retail,North America,52,8521139.67,customer,2025-04-10T12:00:00Z,2025-04-10T12:05:00Z,2025-04-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_141,cmp_0141,Company 0141,Professional Services,Asia Pacific,73,11803301.79,customer,2026-07-08T12:00:00Z,2026-07-08T12:05:00Z,2026-07-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_142,cmp_0142,Company 0142,Financial Services,North America,240,31697671.69,churned,2026-02-22T12:00:00Z,2026-02-22T12:05:00Z,2026-02-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_143,cmp_0143,Company 0143,Healthcare,North America,1453,157829802.7,churned,2026-01-07T12:00:00Z,2026-01-07T12:05:00Z,2026-01-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_144,cmp_0144,Company 0144,Financial Services,Europe,56,4087442.45,customer,2026-04-11T12:00:00Z,2026-04-11T12:05:00Z,2026-04-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_145,cmp_0145,Company 0145,Education,Asia Pacific,130,15079783.87,lead,2025-09-07T12:00:00Z,2025-09-07T12:05:00Z,2025-09-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_146,cmp_0146,Company 0146,Education,North America,169,12181595.34,customer,2025-01-03T12:00:00Z,2025-01-03T12:05:00Z,2025-01-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_147,cmp_0147,Company 0147,Healthcare,North America,123,21382384.94,customer,2025-09-01T12:00:00Z,2025-09-01T12:05:00Z,2025-09-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_148,cmp_0148,Company 0148,Manufacturing,Europe,95,12661672.08,prospect,2025-03-07T12:00:00Z,2025-03-07T12:05:00Z,2025-03-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_149,cmp_0149,Company 0149,Financial Services,Latin America,147,11541786.89,customer,2025-02-14T12:00:00Z,2025-02-14T12:05:00Z,2025-02-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_150,cmp_0150,Company 0150,Financial Services,Asia Pacific,98,7868292.62,lead,2026-02-16T12:00:00Z,2026-02-16T12:05:00Z,2026-02-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_151,cmp_0151,Company 0151,Financial Services,Europe,50,8485069.57,prospect,2025-06-01T12:00:00Z,2025-06-01T12:05:00Z,2025-06-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_152,cmp_0152,Company 0152,Retail,North America,64,10767943.59,customer,2026-06-28T12:00:00Z,2026-06-28T12:05:00Z,2026-06-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_153,cmp_0153,Company 0153,Retail,Asia Pacific,157,20085622.29,customer,2026-07-19T12:00:00Z,2026-07-19T12:05:00Z,2026-07-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_154,cmp_0154,Company 0154,Retail,North America,97,10251403.44,churned,2026-02-13T12:00:00Z,2026-02-13T12:05:00Z,2026-02-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_155,cmp_0155,Company 0155,Manufacturing,North America,562,114607225.4,customer,2026-05-01T12:00:00Z,2026-05-01T12:05:00Z,2026-05-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_156,cmp_0156,Company 0156,Education,North America,44,8721597.01,lead,2025-05-06T12:00:00Z,2025-05-06T12:05:00Z,2025-05-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_157,cmp_0157,Company 0157,Manufacturing,North America,134,12282738.1,customer,2025-10-22T12:00:00Z,2025-10-22T12:05:00Z,2025-10-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_158,cmp_0158,Company 0158,Technology,Asia Pacific,71,10676554.04,customer,2025-04-21T12:00:00Z,2025-04-21T12:05:00Z,2025-04-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_159,cmp_0159,Company 0159,Technology,Europe,165,26745901.37,customer,2026-07-29T12:00:00Z,2026-07-29T12:05:00Z,2026-07-29T12:10:00Z
+org_northstar_001,hubspot,hub_company_160,cmp_0160,Company 0160,Healthcare,Asia Pacific,27,3216868.53,lead,2025-01-30T12:00:00Z,2025-01-30T12:05:00Z,2025-01-30T12:10:00Z
+org_northstar_001,hubspot,hub_company_161,cmp_0161,Company 0161,Professional Services,Europe,126,25962734.02,lead,2025-05-27T12:00:00Z,2025-05-27T12:05:00Z,2025-05-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_162,cmp_0162,Company 0162,Healthcare,North America,58,6590495.44,prospect,2026-06-28T12:00:00Z,2026-06-28T12:05:00Z,2026-06-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_163,cmp_0163,Company 0163,Professional Services,North America,317,49609658.51,customer,2026-08-05T12:00:00Z,2026-08-05T12:05:00Z,2026-08-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_164,cmp_0164,Company 0164,Manufacturing,North America,96,10391362.39,customer,2025-10-06T12:00:00Z,2025-10-06T12:05:00Z,2025-10-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_165,cmp_0165,Company 0165,Financial Services,Europe,87,12017186.94,customer,2025-04-27T12:00:00Z,2025-04-27T12:05:00Z,2025-04-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_166,cmp_0166,Company 0166,Technology,North America,177,30901009.98,lead,2025-02-16T12:00:00Z,2025-02-16T12:05:00Z,2025-02-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_167,cmp_0167,Company 0167,Manufacturing,Asia Pacific,116,21212691.03,lead,2026-01-25T12:00:00Z,2026-01-25T12:05:00Z,2026-01-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_168,cmp_0168,Company 0168,Technology,Asia Pacific,94,14156990.56,customer,2025-02-13T12:00:00Z,2025-02-13T12:05:00Z,2025-02-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_169,cmp_0169,Company 0169,Healthcare,North America,69,13983954.23,customer,2026-03-04T12:00:00Z,2026-03-04T12:05:00Z,2026-03-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_170,cmp_0170,Company 0170,Manufacturing,North America,49,9401797.5,customer,2026-01-06T12:00:00Z,2026-01-06T12:05:00Z,2026-01-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_171,cmp_0171,Company 0171,Manufacturing,Europe,84,12119912.69,lead,2025-08-15T12:00:00Z,2025-08-15T12:05:00Z,2025-08-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_172,cmp_0172,Company 0172,Technology,North America,136,13276055.13,customer,2025-12-24T12:00:00Z,2025-12-24T12:05:00Z,2025-12-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_173,cmp_0173,Company 0173,Education,Europe,106,17528020.82,customer,2025-03-19T12:00:00Z,2025-03-19T12:05:00Z,2025-03-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_174,cmp_0174,Company 0174,Professional Services,North America,386,52360495.35,customer,2025-11-27T12:00:00Z,2025-11-27T12:05:00Z,2025-11-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_175,cmp_0175,Company 0175,Technology,North America,131,17458100.26,lead,2025-10-09T12:00:00Z,2025-10-09T12:05:00Z,2025-10-09T12:10:00Z
+org_northstar_001,hubspot,hub_company_176,cmp_0176,Company 0176,Manufacturing,North America,360,54448602.13,churned,2025-10-21T12:00:00Z,2025-10-21T12:05:00Z,2025-10-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_177,cmp_0177,Company 0177,Financial Services,North America,78,12066663.71,customer,2025-02-12T12:00:00Z,2025-02-12T12:05:00Z,2025-02-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_178,cmp_0178,Company 0178,Education,North America,78,13260325.8,customer,2025-03-05T12:00:00Z,2025-03-05T12:05:00Z,2025-03-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_179,cmp_0179,Company 0179,Healthcare,North America,137,24444234.64,customer,2025-06-26T12:00:00Z,2025-06-26T12:05:00Z,2025-06-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_180,cmp_0180,Company 0180,Technology,North America,315,46656177.67,prospect,2025-02-23T12:00:00Z,2025-02-23T12:05:00Z,2025-02-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_181,cmp_0181,Company 0181,Manufacturing,Asia Pacific,254,29634354.0,customer,2025-09-16T12:00:00Z,2025-09-16T12:05:00Z,2025-09-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_182,cmp_0182,Company 0182,Financial Services,Europe,239,29844914.16,customer,2025-05-25T12:00:00Z,2025-05-25T12:05:00Z,2025-05-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_183,cmp_0183,Company 0183,Education,North America,74,6503943.4,customer,2025-03-28T12:00:00Z,2025-03-28T12:05:00Z,2025-03-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_184,cmp_0184,Company 0184,Healthcare,North America,111,11098553.96,churned,2026-06-24T12:00:00Z,2026-06-24T12:05:00Z,2026-06-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_185,cmp_0185,Company 0185,Education,North America,58,10319502.73,customer,2026-05-13T12:00:00Z,2026-05-13T12:05:00Z,2026-05-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_186,cmp_0186,Company 0186,Education,Europe,44,6759038.08,lead,2026-06-24T12:00:00Z,2026-06-24T12:05:00Z,2026-06-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_187,cmp_0187,Company 0187,Retail,North America,177,21417339.48,customer,2025-07-05T12:00:00Z,2025-07-05T12:05:00Z,2025-07-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_188,cmp_0188,Company 0188,Education,North America,195,28228504.39,prospect,2026-03-31T12:00:00Z,2026-03-31T12:05:00Z,2026-03-31T12:10:00Z
+org_northstar_001,hubspot,hub_company_189,cmp_0189,Company 0189,Financial Services,Latin America,209,43434708.36,customer,2026-04-26T12:00:00Z,2026-04-26T12:05:00Z,2026-04-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_190,cmp_0190,Company 0190,Retail,Latin America,225,41482074.05,customer,2025-10-16T12:00:00Z,2025-10-16T12:05:00Z,2025-10-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_191,cmp_0191,Company 0191,Technology,Europe,105,14933868.0,lead,2025-05-22T12:00:00Z,2025-05-22T12:05:00Z,2025-05-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_192,cmp_0192,Company 0192,Manufacturing,North America,175,22968077.72,churned,2025-03-27T12:00:00Z,2025-03-27T12:05:00Z,2025-03-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_193,cmp_0193,Company 0193,Retail,North America,283,29151527.29,churned,2025-08-16T12:00:00Z,2025-08-16T12:05:00Z,2025-08-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_194,cmp_0194,Company 0194,Technology,Asia Pacific,65,10464642.23,customer,2026-01-19T12:00:00Z,2026-01-19T12:05:00Z,2026-01-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_195,cmp_0195,Company 0195,Education,Europe,89,11819574.37,lead,2025-05-21T12:00:00Z,2025-05-21T12:05:00Z,2025-05-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_196,cmp_0196,Company 0196,Education,North America,140,15702563.41,lead,2025-03-23T12:00:00Z,2025-03-23T12:05:00Z,2025-03-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_197,cmp_0197,Company 0197,Technology,North America,176,34622819.26,customer,2026-03-06T12:00:00Z,2026-03-06T12:05:00Z,2026-03-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_198,cmp_0198,Company 0198,Financial Services,North America,163,21205231.54,customer,2025-01-17T12:00:00Z,2025-01-17T12:05:00Z,2025-01-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_199,cmp_0199,Company 0199,Financial Services,North America,122,25187098.71,lead,2025-09-04T12:00:00Z,2025-09-04T12:05:00Z,2025-09-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_200,cmp_0200,Company 0200,Manufacturing,Europe,143,17826883.73,customer,2026-06-23T12:00:00Z,2026-06-23T12:05:00Z,2026-06-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_201,cmp_0201,Company 0201,Financial Services,North America,52,7876256.18,customer,2026-02-01T12:00:00Z,2026-02-01T12:05:00Z,2026-02-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_202,cmp_0202,Company 0202,Education,Europe,30,5587611.36,customer,2025-05-17T12:00:00Z,2025-05-17T12:05:00Z,2025-05-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_203,cmp_0203,Company 0203,Technology,Europe,270,54568274.7,lead,2026-05-06T12:00:00Z,2026-05-06T12:05:00Z,2026-05-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_204,cmp_0204,Company 0204,Manufacturing,North America,678,50936043.63,customer,2025-07-26T12:00:00Z,2025-07-26T12:05:00Z,2025-07-26T12:10:00Z
+org_northstar_001,hubspot,hub_company_205,cmp_0205,Company 0205,Education,Europe,47,5087765.27,customer,2025-10-20T12:00:00Z,2025-10-20T12:05:00Z,2025-10-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_206,cmp_0206,Company 0206,Professional Services,North America,251,35052972.01,churned,2026-03-24T12:00:00Z,2026-03-24T12:05:00Z,2026-03-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_207,cmp_0207,Company 0207,Retail,North America,79,12193133.49,customer,2026-06-16T12:00:00Z,2026-06-16T12:05:00Z,2026-06-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_208,cmp_0208,Company 0208,Healthcare,Europe,81,9145663.01,customer,2026-07-13T12:00:00Z,2026-07-13T12:05:00Z,2026-07-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_209,cmp_0209,Company 0209,Retail,North America,50,9590260.23,prospect,2026-03-13T12:00:00Z,2026-03-13T12:05:00Z,2026-03-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_210,cmp_0210,Company 0210,Education,Europe,145,13397730.55,lead,2026-03-22T12:00:00Z,2026-03-22T12:05:00Z,2026-03-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_211,cmp_0211,Company 0211,Retail,Latin America,193,14385051.45,lead,2026-03-25T12:00:00Z,2026-03-25T12:05:00Z,2026-03-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_212,cmp_0212,Company 0212,Education,North America,275,24551261.65,prospect,2026-04-06T12:00:00Z,2026-04-06T12:05:00Z,2026-04-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_213,cmp_0213,Company 0213,Technology,North America,142,13638635.22,customer,2025-11-18T12:00:00Z,2025-11-18T12:05:00Z,2025-11-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_214,cmp_0214,Company 0214,Manufacturing,North America,153,30340978.24,customer,2026-07-30T12:00:00Z,2026-07-30T12:05:00Z,2026-07-30T12:10:00Z
+org_northstar_001,hubspot,hub_company_215,cmp_0215,Company 0215,Technology,Asia Pacific,25,5136464.33,churned,2025-05-06T12:00:00Z,2025-05-06T12:05:00Z,2025-05-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_216,cmp_0216,Company 0216,Healthcare,Asia Pacific,200,37838137.42,customer,2025-12-22T12:00:00Z,2025-12-22T12:05:00Z,2025-12-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_217,cmp_0217,Company 0217,Technology,Latin America,237,42870739.05,prospect,2025-06-28T12:00:00Z,2025-06-28T12:05:00Z,2025-06-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_218,cmp_0218,Company 0218,Manufacturing,North America,46,8914547.12,lead,2026-05-21T12:00:00Z,2026-05-21T12:05:00Z,2026-05-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_219,cmp_0219,Company 0219,Education,Europe,126,11030764.44,prospect,2026-02-12T12:00:00Z,2026-02-12T12:05:00Z,2026-02-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_220,cmp_0220,Company 0220,Healthcare,North America,89,16560009.45,customer,2025-03-17T12:00:00Z,2025-03-17T12:05:00Z,2025-03-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_221,cmp_0221,Company 0221,Technology,Asia Pacific,41,5843906.24,prospect,2026-08-25T12:00:00Z,2026-08-25T12:05:00Z,2026-08-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_222,cmp_0222,Company 0222,Healthcare,Latin America,50,7132284.55,prospect,2025-06-15T12:00:00Z,2025-06-15T12:05:00Z,2025-06-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_223,cmp_0223,Company 0223,Manufacturing,North America,45,7087640.88,customer,2025-03-22T12:00:00Z,2025-03-22T12:05:00Z,2025-03-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_224,cmp_0224,Company 0224,Manufacturing,North America,110,17844486.25,customer,2025-04-06T12:00:00Z,2025-04-06T12:05:00Z,2025-04-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_225,cmp_0225,Company 0225,Education,Asia Pacific,301,24492731.11,churned,2025-12-12T12:00:00Z,2025-12-12T12:05:00Z,2025-12-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_226,cmp_0226,Company 0226,Manufacturing,North America,74,11799948.75,customer,2026-08-14T12:00:00Z,2026-08-14T12:05:00Z,2026-08-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_227,cmp_0227,Company 0227,Financial Services,North America,98,13082625.5,customer,2026-07-13T12:00:00Z,2026-07-13T12:05:00Z,2026-07-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_228,cmp_0228,Company 0228,Professional Services,North America,94,8470679.98,customer,2025-06-11T12:00:00Z,2025-06-11T12:05:00Z,2025-06-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_229,cmp_0229,Company 0229,Healthcare,North America,75,6536480.05,prospect,2025-11-23T12:00:00Z,2025-11-23T12:05:00Z,2025-11-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_230,cmp_0230,Company 0230,Retail,Asia Pacific,52,6684020.93,churned,2025-05-25T12:00:00Z,2025-05-25T12:05:00Z,2025-05-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_231,cmp_0231,Company 0231,Professional Services,North America,156,22161590.49,customer,2025-06-13T12:00:00Z,2025-06-13T12:05:00Z,2025-06-13T12:10:00Z
+org_northstar_001,hubspot,hub_company_232,cmp_0232,Company 0232,Retail,North America,109,22381637.98,prospect,2025-11-12T12:00:00Z,2025-11-12T12:05:00Z,2025-11-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_233,cmp_0233,Company 0233,Manufacturing,Asia Pacific,49,7918223.85,customer,2025-12-28T12:00:00Z,2025-12-28T12:05:00Z,2025-12-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_234,cmp_0234,Company 0234,Healthcare,Asia Pacific,57,6910180.07,prospect,2026-07-04T12:00:00Z,2026-07-04T12:05:00Z,2026-07-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_235,cmp_0235,Company 0235,Healthcare,North America,124,17433875.99,customer,2026-08-07T12:00:00Z,2026-08-07T12:05:00Z,2026-08-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_236,cmp_0236,Company 0236,Manufacturing,North America,333,68768360.85,prospect,2025-10-14T12:00:00Z,2025-10-14T12:05:00Z,2025-10-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_237,cmp_0237,Company 0237,Professional Services,North America,123,17377089.73,customer,2025-12-14T12:00:00Z,2025-12-14T12:05:00Z,2025-12-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_238,cmp_0238,Company 0238,Professional Services,Europe,248,35258359.02,prospect,2025-02-16T12:00:00Z,2025-02-16T12:05:00Z,2025-02-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_239,cmp_0239,Company 0239,Healthcare,North America,170,24031195.6,customer,2025-11-23T12:00:00Z,2025-11-23T12:05:00Z,2025-11-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_240,cmp_0240,Company 0240,Healthcare,North America,27,2304305.35,prospect,2026-07-31T12:00:00Z,2026-07-31T12:05:00Z,2026-07-31T12:10:00Z
+org_northstar_001,hubspot,hub_company_241,cmp_0241,Company 0241,Financial Services,Europe,441,67723199.69,prospect,2025-11-12T12:00:00Z,2025-11-12T12:05:00Z,2025-11-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_242,cmp_0242,Company 0242,Manufacturing,North America,157,22512626.67,customer,2026-08-16T12:00:00Z,2026-08-16T12:05:00Z,2026-08-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_243,cmp_0243,Company 0243,Technology,Europe,26,4369896.12,lead,2026-01-25T12:00:00Z,2026-01-25T12:05:00Z,2026-01-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_244,cmp_0244,Company 0244,Financial Services,North America,82,11500887.91,customer,2026-03-28T12:00:00Z,2026-03-28T12:05:00Z,2026-03-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_245,cmp_0245,Company 0245,Financial Services,North America,62,7610839.06,churned,2026-04-28T12:00:00Z,2026-04-28T12:05:00Z,2026-04-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_246,cmp_0246,Company 0246,Healthcare,Europe,246,47102017.65,customer,2026-04-16T12:00:00Z,2026-04-16T12:05:00Z,2026-04-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_247,cmp_0247,Company 0247,Professional Services,North America,131,14644474.62,churned,2025-09-28T12:00:00Z,2025-09-28T12:05:00Z,2025-09-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_248,cmp_0248,Company 0248,Financial Services,Europe,358,40950082.14,prospect,2025-11-01T12:00:00Z,2025-11-01T12:05:00Z,2025-11-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_249,cmp_0249,Company 0249,Manufacturing,North America,57,11811681.09,customer,2025-10-08T12:00:00Z,2025-10-08T12:05:00Z,2025-10-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_250,cmp_0250,Company 0250,Financial Services,North America,75,14952101.13,customer,2025-05-30T12:00:00Z,2025-05-30T12:05:00Z,2025-05-30T12:10:00Z
+org_northstar_001,hubspot,hub_company_251,cmp_0251,Company 0251,Healthcare,North America,56,8746907.95,customer,2026-05-06T12:00:00Z,2026-05-06T12:05:00Z,2026-05-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_252,cmp_0252,Company 0252,Technology,North America,69,11759678.82,lead,2025-09-06T12:00:00Z,2025-09-06T12:05:00Z,2025-09-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_253,cmp_0253,Company 0253,Retail,North America,278,27222826.53,churned,2025-05-21T12:00:00Z,2025-05-21T12:05:00Z,2025-05-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_254,cmp_0254,Company 0254,Education,North America,81,12180672.23,customer,2025-11-25T12:00:00Z,2025-11-25T12:05:00Z,2025-11-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_255,cmp_0255,Company 0255,Education,North America,209,41538514.59,churned,2025-02-08T12:00:00Z,2025-02-08T12:05:00Z,2025-02-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_256,cmp_0256,Company 0256,Financial Services,Latin America,173,34538681.48,customer,2026-02-11T12:00:00Z,2026-02-11T12:05:00Z,2026-02-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_257,cmp_0257,Company 0257,Healthcare,North America,57,11883013.77,customer,2025-01-10T12:00:00Z,2025-01-10T12:05:00Z,2025-01-10T12:10:00Z
+org_northstar_001,hubspot,hub_company_258,cmp_0258,Company 0258,Education,North America,110,10202411.64,customer,2026-05-21T12:00:00Z,2026-05-21T12:05:00Z,2026-05-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_259,cmp_0259,Company 0259,Financial Services,Asia Pacific,81,7660112.32,customer,2025-09-21T12:00:00Z,2025-09-21T12:05:00Z,2025-09-21T12:10:00Z
+org_northstar_001,hubspot,hub_company_260,cmp_0260,Company 0260,Technology,North America,261,21755371.77,churned,2026-02-20T12:00:00Z,2026-02-20T12:05:00Z,2026-02-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_261,cmp_0261,Company 0261,Healthcare,North America,81,10735980.82,prospect,2026-05-04T12:00:00Z,2026-05-04T12:05:00Z,2026-05-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_262,cmp_0262,Company 0262,Technology,North America,43,5174503.59,prospect,2025-12-04T12:00:00Z,2025-12-04T12:05:00Z,2025-12-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_263,cmp_0263,Company 0263,Financial Services,North America,104,20312923.46,customer,2025-05-02T12:00:00Z,2025-05-02T12:05:00Z,2025-05-02T12:10:00Z
+org_northstar_001,hubspot,hub_company_264,cmp_0264,Company 0264,Healthcare,North America,216,21798481.02,churned,2025-11-15T12:00:00Z,2025-11-15T12:05:00Z,2025-11-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_265,cmp_0265,Company 0265,Manufacturing,Asia Pacific,138,24292012.11,customer,2026-05-05T12:00:00Z,2026-05-05T12:05:00Z,2026-05-05T12:10:00Z
+org_northstar_001,hubspot,hub_company_266,cmp_0266,Company 0266,Manufacturing,Asia Pacific,315,25660480.52,prospect,2025-08-12T12:00:00Z,2025-08-12T12:05:00Z,2025-08-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_267,cmp_0267,Company 0267,Technology,Asia Pacific,31,6088534.62,prospect,2026-01-06T12:00:00Z,2026-01-06T12:05:00Z,2026-01-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_268,cmp_0268,Company 0268,Manufacturing,North America,56,9253514.67,customer,2026-07-04T12:00:00Z,2026-07-04T12:05:00Z,2026-07-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_269,cmp_0269,Company 0269,Education,North America,37,3273471.68,prospect,2026-05-16T12:00:00Z,2026-05-16T12:05:00Z,2026-05-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_270,cmp_0270,Company 0270,Education,North America,38,2775818.84,prospect,2026-08-01T12:00:00Z,2026-08-01T12:05:00Z,2026-08-01T12:10:00Z
+org_northstar_001,hubspot,hub_company_271,cmp_0271,Company 0271,Technology,North America,232,38988500.84,customer,2025-01-04T12:00:00Z,2025-01-04T12:05:00Z,2025-01-04T12:10:00Z
+org_northstar_001,hubspot,hub_company_272,cmp_0272,Company 0272,Education,Europe,66,11358634.97,churned,2025-03-03T12:00:00Z,2025-03-03T12:05:00Z,2025-03-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_273,cmp_0273,Company 0273,Education,Asia Pacific,307,37714793.11,lead,2026-01-19T12:00:00Z,2026-01-19T12:05:00Z,2026-01-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_274,cmp_0274,Company 0274,Professional Services,Asia Pacific,93,16355455.98,churned,2026-07-07T12:00:00Z,2026-07-07T12:05:00Z,2026-07-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_275,cmp_0275,Company 0275,Manufacturing,North America,179,18285381.51,customer,2026-04-20T12:00:00Z,2026-04-20T12:05:00Z,2026-04-20T12:10:00Z
+org_northstar_001,hubspot,hub_company_276,cmp_0276,Company 0276,Education,Europe,152,23725565.85,churned,2025-06-08T12:00:00Z,2025-06-08T12:05:00Z,2025-06-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_277,cmp_0277,Company 0277,Manufacturing,North America,76,11680431.3,customer,2025-01-17T12:00:00Z,2025-01-17T12:05:00Z,2025-01-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_278,cmp_0278,Company 0278,Education,Asia Pacific,92,7166999.17,customer,2025-02-19T12:00:00Z,2025-02-19T12:05:00Z,2025-02-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_279,cmp_0279,Company 0279,Education,Europe,138,15855250.03,prospect,2025-10-24T12:00:00Z,2025-10-24T12:05:00Z,2025-10-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_280,cmp_0280,Company 0280,Manufacturing,Latin America,94,18157034.81,churned,2025-05-27T12:00:00Z,2025-05-27T12:05:00Z,2025-05-27T12:10:00Z
+org_northstar_001,hubspot,hub_company_281,cmp_0281,Company 0281,Healthcare,Latin America,118,19350578.51,customer,2026-03-14T12:00:00Z,2026-03-14T12:05:00Z,2026-03-14T12:10:00Z
+org_northstar_001,hubspot,hub_company_282,cmp_0282,Company 0282,Healthcare,North America,168,29503866.61,customer,2025-11-23T12:00:00Z,2025-11-23T12:05:00Z,2025-11-23T12:10:00Z
+org_northstar_001,hubspot,hub_company_283,cmp_0283,Company 0283,Education,North America,45,3513030.79,prospect,2025-08-19T12:00:00Z,2025-08-19T12:05:00Z,2025-08-19T12:10:00Z
+org_northstar_001,hubspot,hub_company_284,cmp_0284,Company 0284,Professional Services,North America,119,13832181.47,lead,2026-03-03T12:00:00Z,2026-03-03T12:05:00Z,2026-03-03T12:10:00Z
+org_northstar_001,hubspot,hub_company_285,cmp_0285,Company 0285,Healthcare,North America,157,24287228.43,lead,2026-04-06T12:00:00Z,2026-04-06T12:05:00Z,2026-04-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_286,cmp_0286,Company 0286,Financial Services,Europe,20,2007646.26,prospect,2025-03-16T12:00:00Z,2025-03-16T12:05:00Z,2025-03-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_287,cmp_0287,Company 0287,Financial Services,North America,69,14485865.59,customer,2025-12-07T12:00:00Z,2025-12-07T12:05:00Z,2025-12-07T12:10:00Z
+org_northstar_001,hubspot,hub_company_288,cmp_0288,Company 0288,Retail,Asia Pacific,257,37853812.95,customer,2025-09-06T12:00:00Z,2025-09-06T12:05:00Z,2025-09-06T12:10:00Z
+org_northstar_001,hubspot,hub_company_289,cmp_0289,Company 0289,Healthcare,North America,97,13754048.61,customer,2026-01-25T12:00:00Z,2026-01-25T12:05:00Z,2026-01-25T12:10:00Z
+org_northstar_001,hubspot,hub_company_290,cmp_0290,Company 0290,Education,Asia Pacific,447,88508802.62,prospect,2025-04-11T12:00:00Z,2025-04-11T12:05:00Z,2025-04-11T12:10:00Z
+org_northstar_001,hubspot,hub_company_291,cmp_0291,Company 0291,Financial Services,North America,129,11782550.07,prospect,2026-02-28T12:00:00Z,2026-02-28T12:05:00Z,2026-02-28T12:10:00Z
+org_northstar_001,hubspot,hub_company_292,cmp_0292,Company 0292,Manufacturing,Europe,123,20403058.66,prospect,2026-01-24T12:00:00Z,2026-01-24T12:05:00Z,2026-01-24T12:10:00Z
+org_northstar_001,hubspot,hub_company_293,cmp_0293,Company 0293,Education,North America,108,9676172.95,customer,2026-05-16T12:00:00Z,2026-05-16T12:05:00Z,2026-05-16T12:10:00Z
+org_northstar_001,hubspot,hub_company_294,cmp_0294,Company 0294,Financial Services,Latin America,354,50746685.23,customer,2025-07-08T12:00:00Z,2025-07-08T12:05:00Z,2025-07-08T12:10:00Z
+org_northstar_001,hubspot,hub_company_295,cmp_0295,Company 0295,Education,Europe,196,15585040.32,lead,2025-03-18T12:00:00Z,2025-03-18T12:05:00Z,2025-03-18T12:10:00Z
+org_northstar_001,hubspot,hub_company_296,cmp_0296,Company 0296,Manufacturing,Europe,111,22282863.83,churned,2025-08-12T12:00:00Z,2025-08-12T12:05:00Z,2025-08-12T12:10:00Z
+org_northstar_001,hubspot,hub_company_297,cmp_0297,Company 0297,Financial Services,North America,97,20064169.55,lead,2026-05-15T12:00:00Z,2026-05-15T12:05:00Z,2026-05-15T12:10:00Z
+org_northstar_001,hubspot,hub_company_298,cmp_0298,Company 0298,Manufacturing,North America,62,7416548.76,customer,2026-03-17T12:00:00Z,2026-03-17T12:05:00Z,2026-03-17T12:10:00Z
+org_northstar_001,hubspot,hub_company_299,cmp_0299,Company 0299,Manufacturing,North America,83,13911885.99,prospect,2025-03-22T12:00:00Z,2025-03-22T12:05:00Z,2025-03-22T12:10:00Z
+org_northstar_001,hubspot,hub_company_300,cmp_0300,Company 0300,Education,North America,443,56145360.05,prospect,2025-03-24T12:00:00Z,2025-03-24T12:05:00Z,2025-03-24T12:10:00Z

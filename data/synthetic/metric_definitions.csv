@@ -1,0 +1,9 @@
+metric_key,metric_name,definition,unit,source_tables,timezone,currency,version
+revenue_collected,Revenue Collected,Successful Stripe payments less refunds in the selected period.,currency,stripe_payments,America/New_York,USD,1.0
+mrr,Monthly Recurring Revenue,Sum of MRR for subscriptions active at period end.,currency,stripe_subscriptions,America/New_York,USD,1.0
+new_customers,New Customers,Count of Stripe customers whose customer_since falls in the selected period.,count,stripe_customers,America/New_York,,1.0
+pipeline_created,Pipeline Created,Sum of CRM deal amount for deals created in the selected period.,currency,crm_deals,America/New_York,USD,1.0
+win_rate,CRM Win Rate,Closed-won deals divided by all closed deals in the selected period.,percent,crm_deals,America/New_York,,1.0
+web_conversion_rate,Web Conversion Rate,GA4 conversions divided by sessions in the selected period.,percent,ga4_daily,America/New_York,,1.0
+support_volume,Support Ticket Volume,Count of tickets created in the selected period.,count,support_tickets,America/New_York,,1.0
+avg_first_response,Average First Response,Average support first-response time in minutes.,duration,support_tickets,America/New_York,,1.0

@@ -1,0 +1,733 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum MembershipRole {
+  OWNER
+  ADMIN
+  ANALYST
+  VIEWER
+}
+
+enum ConnectionProvider {
+  HUBSPOT
+  GA4
+  STRIPE
+  QUICKBOOKS
+  SUPPORT
+  SYNTHETIC
+}
+
+enum ConnectionStatus {
+  DISCONNECTED
+  CONNECTED
+  ERROR
+}
+
+enum InvestigationStatus {
+  PENDING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+model Organization {
+  syncRuns SyncRun[]
+  narrations AudioNarration[]
+  explanations Explanation[]
+  industry               String?
+  syntheticDataset       String?
+  sourceSystem           SourceSystem?
+  sourceRecordId         String?
+  sourceUpdatedAt        DateTime?            @db.Timestamptz(3)
+  ingestedAt             DateTime?            @db.Timestamptz(3)
+  normalizedAt           DateTime?            @db.Timestamptz(3)
+  id                     String               @id @default(cuid())
+  name                   String
+  slug                   String               @unique
+  timezone               String               @default("UTC")
+  currency               String               @default("USD") @db.VarChar(3)
+  createdAt              DateTime             @default(now()) @db.Timestamptz(3)
+  updatedAt              DateTime             @updatedAt @db.Timestamptz(3)
+  cRMCompanyRows         CRMCompany[]
+  cRMContactRows         CRMContact[]
+  cRMDealRows            CRMDeal[]
+  gA4DailyMetricRows     GA4DailyMetric[]
+  stripeCustomerRows     StripeCustomer[]
+  stripeSubscriptionRows StripeSubscription[]
+  stripePaymentRows      StripePayment[]
+  quickBooksInvoiceRows  QuickBooksInvoice[]
+  quickBooksExpenseRows  QuickBooksExpense[]
+  supportTicketRows      SupportTicket[]
+  memberships            Membership[]
+  connections            Connection[]
+  metricDefinitions      MetricDefinition[]
+  metricValues           MetricValue[]
+  investigations         Investigation[]
+  evidenceItems          EvidenceItem[]
+}
+
+// Global identity: tenant access is represented exclusively by Membership.
+model User {
+  passwordHash String?
+  sessions Session[]
+  id          String       @id @default(cuid())
+  email       String       @unique
+  name        String?
+  createdAt   DateTime     @default(now()) @db.Timestamptz(3)
+  updatedAt   DateTime     @updatedAt @db.Timestamptz(3)
+  memberships Membership[]
+}
+
+model Membership {
+  narrations AudioNarration[]
+  explanations Explanation[]
+  id             String          @id @default(cuid())
+  organizationId String
+  userId         String
+  role           MembershipRole  @default(VIEWER)
+  createdAt      DateTime        @default(now()) @db.Timestamptz(3)
+  updatedAt      DateTime        @updatedAt @db.Timestamptz(3)
+  organization   Organization    @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  user           User            @relation(fields: [userId], references: [id], onDelete: Restrict)
+  investigations Investigation[]
+
+  @@unique([organizationId, userId])
+  @@unique([organizationId, id])
+  @@index([userId])
+}
+
+model Connection {
+  liveMode Boolean?
+  syncEnabled Boolean @default(false)
+  syncIntervalMinutes Int @default(60)
+  nextSyncAt DateTime? @db.Timestamptz(3)
+  syncRequestedAt DateTime? @db.Timestamptz(3)
+  requestedFullSync Boolean @default(false)
+  syncWatermark DateTime? @db.Timestamptz(3)
+  activeRunId String?
+  leaseUntil DateTime? @db.Timestamptz(3)
+  liveCustomers StripeCustomer[]
+  liveSubscriptions StripeSubscription[]
+  livePayments StripePayment[]
+
+  syncRuns SyncRun[]
+  id                String             @id @default(cuid())
+  organizationId    String
+  provider          ConnectionProvider
+  name              String
+  status            ConnectionStatus   @default(DISCONNECTED)
+  externalAccountId String?
+  // Reference to a future secret manager; never store raw credentials here.
+  secretReference   String?
+  lastSyncedAt      DateTime?          @db.Timestamptz(3)
+  createdAt         DateTime           @default(now()) @db.Timestamptz(3)
+  updatedAt         DateTime           @updatedAt @db.Timestamptz(3)
+  organization      Organization       @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  evidenceItems     EvidenceItem[]
+
+  @@unique([organizationId, id])
+  @@unique([organizationId, provider, name])
+}
+
+model MetricDefinition {
+  syntheticDataset String?
+  sourceSystem     SourceSystem?
+  sourceRecordId   String?
+  sourceUpdatedAt  DateTime?     @db.Timestamptz(3)
+  ingestedAt       DateTime?     @db.Timestamptz(3)
+  normalizedAt     DateTime?     @db.Timestamptz(3)
+  id               String        @id @default(cuid())
+  organizationId   String
+  key              String
+  name             String
+  definition       String
+  unit             String
+  sourceTables     String[]
+  timezone         String        @default("UTC")
+  currency         String?       @db.VarChar(3)
+  version          String        @default("1.0")
+  createdAt        DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt        DateTime      @updatedAt @db.Timestamptz(3)
+  organization     Organization  @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  values           MetricValue[]
+
+  @@unique([organizationId, id])
+  @@unique([organizationId, key, version])
+}
+
+enum MetricResultStatus {
+  COMPUTED
+  NO_DATA
+}
+
+model MetricValue {
+  status             MetricResultStatus @default(COMPUTED)
+  engineVersion      String?
+  inputHash          String?
+  calculationDetails Json?
+  syntheticDataset   String?
+  id                 String             @id @default(cuid())
+  organizationId     String
+  metricDefinitionId String
+  periodStart        DateTime           @db.Timestamptz(3)
+  periodEnd          DateTime           @db.Timestamptz(3)
+  value              Decimal?           @db.Decimal(24, 8)
+  computedAt         DateTime           @default(now()) @db.Timestamptz(3)
+  createdAt          DateTime           @default(now()) @db.Timestamptz(3)
+  updatedAt          DateTime           @updatedAt @db.Timestamptz(3)
+  organization       Organization       @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  metricDefinition   MetricDefinition   @relation(fields: [organizationId, metricDefinitionId], references: [organizationId, id], onDelete: Restrict)
+  evidenceItems      EvidenceItem[]
+
+  @@unique([organizationId, id])
+  @@unique([organizationId, metricDefinitionId, periodStart, periodEnd])
+}
+
+model Investigation {
+  explanations Explanation[]
+  engineVersion String?
+  inputHash String?
+  parameters Json?
+  findings Json?
+  @@unique([organizationId, inputHash])
+  id                      String              @id @default(cuid())
+  organizationId          String
+  requestedByMembershipId String?
+  question                String
+  status                  InvestigationStatus @default(PENDING)
+  summary                 String?
+  startedAt               DateTime?           @db.Timestamptz(3)
+  completedAt             DateTime?           @db.Timestamptz(3)
+  createdAt               DateTime            @default(now()) @db.Timestamptz(3)
+  updatedAt               DateTime            @updatedAt @db.Timestamptz(3)
+  organization            Organization        @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  requestedBy             Membership?         @relation(fields: [organizationId, requestedByMembershipId], references: [organizationId, id], onDelete: Restrict)
+  evidenceItems           EvidenceItem[]
+
+  @@unique([organizationId, id])
+  @@index([organizationId, status, createdAt])
+  @@index([organizationId, requestedByMembershipId])
+}
+
+model EvidenceItem {
+  id              String        @id @default(cuid())
+  organizationId  String
+  investigationId String
+  metricValueId   String?
+  connectionId    String?
+  title           String
+  description     String
+  sourceRecordId  String?
+  // Structured provenance or a result snapshot, never executable SQL or credentials.
+  details         Json?
+  createdAt       DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt       DateTime      @updatedAt @db.Timestamptz(3)
+  organization    Organization  @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  investigation   Investigation @relation(fields: [organizationId, investigationId], references: [organizationId, id], onDelete: Restrict)
+  metricValue     MetricValue?  @relation(fields: [organizationId, metricValueId], references: [organizationId, id], onDelete: Restrict)
+  connection      Connection?   @relation(fields: [organizationId, connectionId], references: [organizationId, id], onDelete: Restrict)
+
+  @@unique([organizationId, id])
+  @@index([organizationId, investigationId])
+  @@index([organizationId, metricValueId])
+  @@index([organizationId, connectionId])
+}
+
+enum SourceSystem {
+  hubspot
+  ga4
+  stripe
+  quickbooks
+  zendesk
+  synthetic
+}
+
+enum CompanyLifecycle {
+  churned
+  customer
+  lead
+  prospect
+}
+
+enum ContactLifecycle {
+  MQL
+  SQL
+  customer
+  lead
+  subscriber
+}
+
+enum DealStage {
+  closed_lost
+  closed_won
+  demo
+  proposal
+  qualification
+}
+
+enum BillingStatus {
+  trialing
+  past_due
+  unpaid
+  incomplete
+  incomplete_expired
+  paused
+  active
+  canceled
+}
+
+enum PaymentStatus {
+  pending
+  failed
+  succeeded
+}
+
+enum PaymentMethod {
+  other
+  ach
+  card
+}
+
+enum InvoiceStatus {
+  paid
+  open
+  void
+  uncollectible
+}
+
+enum TicketPriority {
+  high
+  low
+  normal
+  urgent
+}
+
+enum TicketStatus {
+  closed
+  open
+  pending
+  solved
+}
+
+model CRMCompany {
+  id                 String           @id @default(cuid())
+  syntheticDataset   String?
+  organizationId     String
+  sourceSystem       SourceSystem
+  sourceRecordId     String
+  companyId          String
+  companyName        String
+  industry           String
+  region             String
+  employeeCount      Int
+  annualRevenueUsd   Decimal          @db.Decimal(20, 2)
+  lifecycleStage     CompanyLifecycle
+  sourceUpdatedAt    DateTime         @db.Timestamptz(3)
+  ingestedAt         DateTime         @db.Timestamptz(3)
+  normalizedAt       DateTime         @db.Timestamptz(3)
+  organization       Organization     @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  cRMContactRows     CRMContact[]
+  cRMDealRows        CRMDeal[]
+  stripeCustomerRows StripeCustomer[]
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, companyId])
+  @@index([organizationId, syntheticDataset])
+}
+
+model CRMContact {
+  id               String           @id @default(cuid())
+  syntheticDataset String?
+  organizationId   String
+  sourceSystem     SourceSystem
+  sourceRecordId   String
+  contactId        String
+  companyId        String
+  firstName        String
+  lastName         String
+  jobTitle         String
+  email            String
+  region           String
+  lifecycleStage   ContactLifecycle
+  createdDate      DateTime         @db.Date
+  sourceUpdatedAt  DateTime         @db.Timestamptz(3)
+  ingestedAt       DateTime         @db.Timestamptz(3)
+  normalizedAt     DateTime         @db.Timestamptz(3)
+  organization     Organization     @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  company          CRMCompany       @relation(fields: [organizationId, companyId], references: [organizationId, companyId], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, contactId])
+  @@index([organizationId, companyId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, createdDate])
+}
+
+model CRMDeal {
+  id               String       @id @default(cuid())
+  syntheticDataset String?
+  organizationId   String
+  sourceSystem     SourceSystem
+  sourceRecordId   String
+  dealId           String
+  companyId        String
+  dealName         String
+  stage            DealStage
+  amountUsd        Decimal      @db.Decimal(20, 2)
+  createdDate      DateTime     @db.Date
+  closeDate        DateTime?    @db.Date
+  ownerId          String
+  pipeline         String
+  isClosedWon      Boolean
+  sourceUpdatedAt  DateTime     @db.Timestamptz(3)
+  ingestedAt       DateTime     @db.Timestamptz(3)
+  normalizedAt     DateTime     @db.Timestamptz(3)
+  organization     Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  company          CRMCompany   @relation(fields: [organizationId, companyId], references: [organizationId, companyId], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, dealId])
+  @@index([organizationId, companyId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, createdDate])
+}
+
+model GA4DailyMetric {
+  id                   String       @id @default(cuid())
+  syntheticDataset     String?
+  organizationId       String
+  sourceSystem         SourceSystem
+  sourceRecordId       String
+  date                 DateTime     @db.Date
+  channel              String
+  sessions             Int
+  users                Int
+  conversions          Int
+  conversionRate       Decimal      @db.Decimal(7, 6)
+  bounceRate           Decimal      @db.Decimal(7, 6)
+  revenueAttributedUsd Decimal      @db.Decimal(20, 2)
+  sourceUpdatedAt      DateTime     @db.Timestamptz(3)
+  ingestedAt           DateTime     @db.Timestamptz(3)
+  normalizedAt         DateTime     @db.Timestamptz(3)
+  organization         Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, sourceSystem, date, channel])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, date])
+}
+
+model StripeCustomer {
+  sourceConnectionId String?
+  sourceHash String?
+  sourceObservedAt DateTime? @db.Timestamptz(3)
+  sourceCreatedAt DateTime? @db.Timestamptz(3)
+  sourceDeletedAt DateTime? @db.Timestamptz(3)
+  sourceConnection Connection? @relation(fields: [organizationId, sourceConnectionId], references: [organizationId, id], onDelete: Restrict)
+  @@index([organizationId, sourceConnectionId])
+
+  id                     String               @id @default(cuid())
+  syntheticDataset       String?
+  organizationId         String
+  sourceSystem           SourceSystem
+  sourceRecordId         String
+  customerId             String
+  companyId              String?
+  customerSince          DateTime?             @db.Date
+  status                 BillingStatus?
+  country                String?
+  sourceUpdatedAt        DateTime?             @db.Timestamptz(3)
+  ingestedAt             DateTime             @db.Timestamptz(3)
+  normalizedAt           DateTime             @db.Timestamptz(3)
+  organization           Organization         @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  company                CRMCompany?           @relation(fields: [organizationId, companyId], references: [organizationId, companyId], onDelete: Restrict)
+  stripeSubscriptionRows StripeSubscription[]
+  stripePaymentRows      StripePayment[]
+  quickBooksInvoiceRows  QuickBooksInvoice[]
+  supportTicketRows      SupportTicket[]
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, customerId])
+  @@index([organizationId, companyId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, customerSince])
+}
+
+model StripeSubscription {
+  billingComponents Json?
+  currency String? @db.VarChar(3)
+  cancelAtPeriodEnd Boolean?
+
+  sourceConnectionId String?
+  sourceHash String?
+  sourceObservedAt DateTime? @db.Timestamptz(3)
+  sourceCreatedAt DateTime? @db.Timestamptz(3)
+  sourceDeletedAt DateTime? @db.Timestamptz(3)
+  sourceConnection Connection? @relation(fields: [organizationId, sourceConnectionId], references: [organizationId, id], onDelete: Restrict)
+  @@index([organizationId, sourceConnectionId])
+
+  id                         String          @id @default(cuid())
+  syntheticDataset           String?
+  organizationId             String
+  sourceSystem               SourceSystem
+  sourceRecordId             String
+  subscriptionId             String
+  customerId                 String
+  plan                       String
+  monthlyRecurringRevenueUsd Decimal?         @db.Decimal(20, 2)
+  status                     BillingStatus
+  startDate                  DateTime        @db.Date
+  cancelDate                 DateTime?       @db.Date
+  sourceUpdatedAt            DateTime?        @db.Timestamptz(3)
+  ingestedAt                 DateTime        @db.Timestamptz(3)
+  normalizedAt               DateTime        @db.Timestamptz(3)
+  organization               Organization    @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  customer                   StripeCustomer  @relation(fields: [organizationId, customerId], references: [organizationId, customerId], onDelete: Restrict)
+  stripePaymentRows          StripePayment[]
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, subscriptionId])
+  @@unique([organizationId, customerId, subscriptionId])
+  @@index([organizationId, customerId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, startDate])
+}
+
+model StripePayment {
+  currency String? @db.VarChar(3)
+  amountMinor BigInt?
+  capturedAmountMinor BigInt?
+  refundedAmountMinor BigInt?
+  paymentMethodType String?
+  invoiceSourceId String?
+
+  sourceConnectionId String?
+  sourceHash String?
+  sourceObservedAt DateTime? @db.Timestamptz(3)
+  sourceCreatedAt DateTime? @db.Timestamptz(3)
+  sourceDeletedAt DateTime? @db.Timestamptz(3)
+  sourceConnection Connection? @relation(fields: [organizationId, sourceConnectionId], references: [organizationId, id], onDelete: Restrict)
+  @@index([organizationId, sourceConnectionId])
+
+  id               String             @id @default(cuid())
+  syntheticDataset String?
+  organizationId   String
+  sourceSystem     SourceSystem
+  sourceRecordId   String
+  paymentId        String
+  customerId       String?
+  subscriptionId   String?
+  paymentDate      DateTime           @db.Date
+  amountUsd        Decimal?            @db.Decimal(20, 2)
+  status           PaymentStatus
+  paymentMethod    PaymentMethod
+  refundAmountUsd  Decimal?            @db.Decimal(20, 2)
+  sourceUpdatedAt  DateTime?           @db.Timestamptz(3)
+  ingestedAt       DateTime           @db.Timestamptz(3)
+  normalizedAt     DateTime           @db.Timestamptz(3)
+  organization     Organization       @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  customer         StripeCustomer?     @relation(fields: [organizationId, customerId], references: [organizationId, customerId], onDelete: Restrict)
+  subscription     StripeSubscription? @relation(fields: [organizationId, customerId, subscriptionId], references: [organizationId, customerId, subscriptionId], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, paymentId])
+  @@index([organizationId, customerId])
+  @@index([organizationId, customerId, subscriptionId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, paymentDate])
+}
+
+model QuickBooksInvoice {
+  id               String         @id @default(cuid())
+  syntheticDataset String?
+  organizationId   String
+  sourceSystem     SourceSystem
+  sourceRecordId   String
+  invoiceId        String
+  customerId       String
+  invoiceDate      DateTime       @db.Date
+  dueDate          DateTime       @db.Date
+  amountUsd        Decimal        @db.Decimal(20, 2)
+  status           InvoiceStatus
+  paidDate         DateTime?      @db.Date
+  sourceUpdatedAt  DateTime       @db.Timestamptz(3)
+  ingestedAt       DateTime       @db.Timestamptz(3)
+  normalizedAt     DateTime       @db.Timestamptz(3)
+  organization     Organization   @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  customer         StripeCustomer @relation(fields: [organizationId, customerId], references: [organizationId, customerId], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, invoiceId])
+  @@index([organizationId, customerId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, invoiceDate])
+}
+
+model QuickBooksExpense {
+  id               String       @id @default(cuid())
+  syntheticDataset String?
+  organizationId   String
+  sourceSystem     SourceSystem
+  sourceRecordId   String
+  expenseId        String
+  expenseDate      DateTime     @db.Date
+  category         String
+  vendor           String
+  amountUsd        Decimal      @db.Decimal(20, 2)
+  department       String
+  isRecurring      Boolean
+  sourceUpdatedAt  DateTime     @db.Timestamptz(3)
+  ingestedAt       DateTime     @db.Timestamptz(3)
+  normalizedAt     DateTime     @db.Timestamptz(3)
+  organization     Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, expenseId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, expenseDate])
+}
+
+model SupportTicket {
+  id                   String         @id @default(cuid())
+  syntheticDataset     String?
+  organizationId       String
+  sourceSystem         SourceSystem
+  sourceRecordId       String
+  ticketId             String
+  customerId           String
+  createdAt            DateTime       @db.Timestamptz(3)
+  priority             TicketPriority
+  category             String
+  status               TicketStatus
+  firstResponseMinutes Int
+  resolutionMinutes    Int?
+  satisfactionScore    Decimal?       @db.Decimal(3, 2)
+  sourceUpdatedAt      DateTime       @db.Timestamptz(3)
+  ingestedAt           DateTime       @db.Timestamptz(3)
+  normalizedAt         DateTime       @db.Timestamptz(3)
+  organization         Organization   @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  customer             StripeCustomer @relation(fields: [organizationId, customerId], references: [organizationId, customerId], onDelete: Restrict)
+
+  @@unique([organizationId, sourceSystem, sourceRecordId])
+  @@unique([organizationId, ticketId])
+  @@index([organizationId, customerId])
+  @@index([organizationId, syntheticDataset])
+  @@index([organizationId, createdAt])
+}
+
+model Session {
+  id String @id @default(cuid())
+  tokenHash String @unique
+  userId String
+  expiresAt DateTime @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model LoginThrottle {
+  key String @id
+  attempts Int
+  windowStart DateTime @db.Timestamptz(3)
+}
+
+
+enum ExplanationStatus {
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+model Explanation {
+  narrations AudioNarration[]
+  id String @id @default(cuid())
+  organizationId String
+  investigationId String
+  requestedByMembershipId String
+  inputHash String
+  promptVersion String
+  model String
+  status ExplanationStatus @default(RUNNING)
+  requestId String
+  attempts Int @default(1)
+  content Json?
+  errorCode String?
+  startedAt DateTime @default(now()) @db.Timestamptz(3)
+  completedAt DateTime? @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  investigation Investigation @relation(fields: [organizationId, investigationId], references: [organizationId, id], onDelete: Restrict)
+  requestedBy Membership @relation(fields: [organizationId, requestedByMembershipId], references: [organizationId, id], onDelete: Restrict)
+
+  @@unique([organizationId, id])
+  @@unique([organizationId, investigationId, inputHash])
+  @@index([organizationId, investigationId, createdAt])
+  @@index([organizationId, requestedByMembershipId])
+}
+
+
+enum NarrationStatus {
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+model AudioNarration {
+  id String @id @default(cuid())
+  organizationId String
+  explanationId String
+  requestedByMembershipId String
+  inputHash String
+  transcriptVersion String
+  transcript String
+  voiceId String
+  model String
+  status NarrationStatus @default(RUNNING)
+  requestId String
+  attempts Int @default(1)
+  audio Bytes?
+  errorCode String?
+  startedAt DateTime @default(now()) @db.Timestamptz(3)
+  completedAt DateTime? @db.Timestamptz(3)
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime @updatedAt @db.Timestamptz(3)
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  explanation Explanation @relation(fields: [organizationId, explanationId], references: [organizationId, id], onDelete: Restrict)
+  requestedBy Membership @relation(fields: [organizationId, requestedByMembershipId], references: [organizationId, id], onDelete: Restrict)
+
+  @@unique([organizationId, explanationId, inputHash])
+  @@index([organizationId, explanationId, createdAt])
+  @@index([organizationId, requestedByMembershipId])
+}
+
+
+enum SyncStatus {
+  RUNNING
+  COMPLETED
+  PARTIAL
+  FAILED
+}
+
+model SyncRun {
+  id String @id @default(cuid())
+  organizationId String
+  connectionId String
+  status SyncStatus @default(RUNNING)
+  fullSync Boolean
+  cutoff DateTime @db.Timestamptz(3)
+  startedAt DateTime @default(now()) @db.Timestamptz(3)
+  completedAt DateTime? @db.Timestamptz(3)
+  errorCode String?
+  report Json?
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  connection Connection @relation(fields: [organizationId, connectionId], references: [organizationId, id], onDelete: Restrict)
+  @@index([organizationId, connectionId, startedAt])
+}

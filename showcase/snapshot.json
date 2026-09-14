@@ -1,0 +1,278 @@
+{
+  "demo": true,
+  "engineVersion": "1.0.0",
+  "current": "August 2026",
+  "baseline": "July 2026",
+  "organizations": [
+    {
+      "name": "Northstar SaaS",
+      "timezone": "America/New_York",
+      "metrics": [
+        {
+          "key": "revenue_collected",
+          "name": "Revenue Collected",
+          "unit": "currency",
+          "formula": "sum(succeeded payment amount - refund amount), attributed to payment_date",
+          "current": {
+            "value": "594411.43",
+            "status": "COMPUTED",
+            "sourceCount": 434,
+            "numerator": "594411.43",
+            "denominator": "0",
+            "limitations": [
+              "Refunds are attributed to payment_date; refund event dates are unavailable."
+            ],
+            "inputHash": "6c2922538bac4503f300648a91919440298b8bf58565e014953ccbcae93185e6"
+          },
+          "baseline": {
+            "value": "580390.54",
+            "status": "COMPUTED",
+            "sourceCount": 428,
+            "numerator": "580390.54",
+            "denominator": "0",
+            "limitations": [
+              "Refunds are attributed to payment_date; refund event dates are unavailable."
+            ],
+            "inputHash": "44f702001c12b9d777875fa77fe7707da39c2f098110c289091cde2ca801f202"
+          },
+          "finding": {
+            "state": "BELOW_THRESHOLD",
+            "statement": "revenue collected increased; current 594411.43, comparison 580390.54, change 14020.89000000 USD. Below the 20 relative percent rule.",
+            "nextStep": "Review the payment and refund records behind the change.",
+            "significant": false,
+            "delta": "14020.89000000",
+            "relativePercent": "2.41576818"
+          }
+        },
+        {
+          "key": "mrr",
+          "name": "Monthly Recurring Revenue",
+          "unit": "currency",
+          "formula": "sum(MRR where start_date < end and cancel_date is null or >= end)",
+          "current": {
+            "value": "609558",
+            "status": "COMPUTED",
+            "sourceCount": 442,
+            "numerator": "609558",
+            "denominator": "0",
+            "limitations": [
+              "Historical MRR uses current stored plan amounts and start/cancel dates; plan change history is unavailable."
+            ],
+            "inputHash": "30345fd10ab3ad7521168f74cf7057b58c51efbfcc09892ccf404d46a4a7a1cf"
+          },
+          "baseline": {
+            "value": "589069",
+            "status": "COMPUTED",
+            "sourceCount": 431,
+            "numerator": "589069",
+            "denominator": "0",
+            "limitations": [
+              "Historical MRR uses current stored plan amounts and start/cancel dates; plan change history is unavailable."
+            ],
+            "inputHash": "cb0f8e5dded8e7af1f735b1606bd2bd0d909565a031a09bdae662e8454e53545"
+          },
+          "finding": {
+            "state": "BELOW_THRESHOLD",
+            "statement": "mrr increased; current 609558, comparison 589069, change 20489.00000000 USD. Below the 20 relative percent rule.",
+            "nextStep": "Review included subscriptions and cancellation dates; plan-change history is unavailable.",
+            "significant": false,
+            "delta": "20489.00000000",
+            "relativePercent": "3.47820035"
+          }
+        },
+        {
+          "key": "new_customers",
+          "name": "New Customers",
+          "unit": "count",
+          "formula": "count(customer_since in period)",
+          "current": {
+            "value": "12",
+            "status": "COMPUTED",
+            "sourceCount": 12,
+            "numerator": "12",
+            "denominator": "0",
+            "limitations": [],
+            "inputHash": "e3dd701931799d93318cb4958d8b54ca0416301e3a419b1a661f764df491f5cd"
+          },
+          "baseline": {
+            "value": "12",
+            "status": "COMPUTED",
+            "sourceCount": 12,
+            "numerator": "12",
+            "denominator": "0",
+            "limitations": [],
+            "inputHash": "9ad43e59ca69b8e09b6042b89671fa01c5cab795330e28e43baac04993b6c690"
+          },
+          "finding": {
+            "state": "BELOW_THRESHOLD",
+            "statement": "new customers unchanged; current 12, comparison 12, change 0.00000000 records. Below the 20 relative percent rule.",
+            "nextStep": "Review customer acquisition records for each period.",
+            "significant": false,
+            "delta": "0.00000000",
+            "relativePercent": "0.00000000"
+          }
+        },
+        {
+          "key": "pipeline_created",
+          "name": "Pipeline Created",
+          "unit": "currency",
+          "formula": "sum(amount for deals created in period, all stages)",
+          "current": {
+            "value": "169985.31",
+            "status": "COMPUTED",
+            "sourceCount": 28,
+            "numerator": "169985.31",
+            "denominator": "0",
+            "limitations": [],
+            "inputHash": "ebb7b11ffe2f7b48185167076b29a36efb1e872929884c72fca732aaffa637af"
+          },
+          "baseline": {
+            "value": "237028.08",
+            "status": "COMPUTED",
+            "sourceCount": 34,
+            "numerator": "237028.08",
+            "denominator": "0",
+            "limitations": [],
+            "inputHash": "74eab792b84dd5d3db8e043cbb16fd440fda83d5b253527238bde92f51dabdc4"
+          },
+          "finding": {
+            "state": "SIGNIFICANT_CHANGE",
+            "statement": "pipeline created decreased; current 169985.31, comparison 237028.08, change -67042.77000000 USD. Meets the 20 relative percent rule; this is not a statistical significance test.",
+            "nextStep": "Review deal creation and amounts for the largest listed contributors.",
+            "significant": true,
+            "delta": "-67042.77000000",
+            "relativePercent": "-28.28473740"
+          }
+        },
+        {
+          "key": "win_rate",
+          "name": "CRM Win Rate",
+          "unit": "percent",
+          "formula": "100 * closed_won / (closed_won + closed_lost), by close_date",
+          "current": {
+            "value": "48.48484848",
+            "status": "COMPUTED",
+            "sourceCount": 33,
+            "numerator": "16",
+            "denominator": "33",
+            "limitations": [],
+            "inputHash": "4174eebfe9d7524b26be0ac339438f7402676dc9c0879517c77f2d796e7cc8be"
+          },
+          "baseline": {
+            "value": "64",
+            "status": "COMPUTED",
+            "sourceCount": 25,
+            "numerator": "16",
+            "denominator": "25",
+            "limitations": [],
+            "inputHash": "1420ec0c2243b24b6e11140af20e2fc7620105f447dc661d095dee1da47492ca"
+          },
+          "finding": {
+            "state": "SIGNIFICANT_CHANGE",
+            "statement": "win rate decreased; current 48.48484848, comparison 64, change -15.51515152 percentage points. Meets the 5 percentage points rule; this is not a statistical significance test.",
+            "nextStep": "Review closed-won and closed-lost outcomes; this comparison does not explain why deals changed.",
+            "significant": true,
+            "delta": "-15.51515152",
+            "relativePercent": "-24.24242425"
+          }
+        },
+        {
+          "key": "web_conversion_rate",
+          "name": "Web Conversion Rate",
+          "unit": "percent",
+          "formula": "100 * sum(conversions) / sum(sessions)",
+          "current": {
+            "value": "2.9783068",
+            "status": "COMPUTED",
+            "sourceCount": 186,
+            "numerator": "1156",
+            "denominator": "38814",
+            "limitations": [],
+            "inputHash": "3fa29b6adf8fa8cd03945ea5bd7129d475561243e910daebbf33af92b318b747"
+          },
+          "baseline": {
+            "value": "3.06561884",
+            "status": "COMPUTED",
+            "sourceCount": 186,
+            "numerator": "1260",
+            "denominator": "41101",
+            "limitations": [],
+            "inputHash": "b8e229184fe6b9a135fe6008045c8b9f15609b5c80eb61a90c6e5de5483d4422"
+          },
+          "finding": {
+            "state": "BELOW_THRESHOLD",
+            "statement": "web conversion rate decreased; current 2.9783068, comparison 3.06561884, change -0.08731204 percentage points. Below the 0.5 percentage points rule.",
+            "nextStep": "Review channel contributions, traffic mix, and conversion counts.",
+            "significant": false,
+            "delta": "-0.08731204",
+            "relativePercent": "-2.84810489"
+          }
+        },
+        {
+          "key": "support_volume",
+          "name": "Support Ticket Volume",
+          "unit": "count",
+          "formula": "count(tickets created in period, all statuses)",
+          "current": {
+            "value": "207",
+            "status": "COMPUTED",
+            "sourceCount": 207,
+            "numerator": "207",
+            "denominator": "207",
+            "limitations": [],
+            "inputHash": "e7f3fab0d4e9d799aba9648705ea4d3e9e080b3c68c0999e05533d65a135335a"
+          },
+          "baseline": {
+            "value": "116",
+            "status": "COMPUTED",
+            "sourceCount": 116,
+            "numerator": "116",
+            "denominator": "116",
+            "limitations": [],
+            "inputHash": "630eadd91e55353b36bd82a4db586e0cf7940ddc3a00d40c1f01cd8aefe932df"
+          },
+          "finding": {
+            "state": "SIGNIFICANT_CHANGE",
+            "statement": "support volume increased; current 207, comparison 116, change 91.00000000 records. Meets the 20 relative percent rule; this is not a statistical significance test.",
+            "nextStep": "Review support workload and capacity; increased volume does not by itself establish worse service.",
+            "significant": true,
+            "delta": "91.00000000",
+            "relativePercent": "78.44827586"
+          }
+        },
+        {
+          "key": "avg_first_response",
+          "name": "Average First Response",
+          "unit": "duration",
+          "formula": "sum(first_response_minutes) / count(tickets created in period)",
+          "current": {
+            "value": "36.35748792",
+            "status": "COMPUTED",
+            "sourceCount": 207,
+            "numerator": "7526",
+            "denominator": "207",
+            "limitations": [],
+            "inputHash": "981b5cd52d12abc3271b8cb450e3d77699d868d16ad67dd75cb2ebb8ea3e5444"
+          },
+          "baseline": {
+            "value": "32.86206897",
+            "status": "COMPUTED",
+            "sourceCount": 116,
+            "numerator": "3812",
+            "denominator": "116",
+            "limitations": [],
+            "inputHash": "16f01350815720f80afa051f0b09eb8eb54fea7e1506f718782c27da2b1fafd4"
+          },
+          "finding": {
+            "state": "BELOW_THRESHOLD",
+            "statement": "avg first response increased; current 36.35748792, comparison 32.86206897, change 3.49541895 minutes. Below the 20 relative percent rule.",
+            "nextStep": "Review response-time records and workload before drawing conclusions about service quality.",
+            "significant": false,
+            "delta": "3.49541895",
+            "relativePercent": "10.63663689"
+          }
+        }
+      ]
+    }
+  ]
+}

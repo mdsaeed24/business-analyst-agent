@@ -1,0 +1,13 @@
+file,primary_key,important_foreign_keys,purpose
+organizations.csv,organization_id,,Tenant/company settings
+crm_companies.csv,company_id,organization_id,CRM accounts/companies
+crm_contacts.csv,contact_id,"organization_id, company_id",CRM contacts
+crm_deals.csv,deal_id,"organization_id, company_id",Sales pipeline and closed-won activity
+ga4_daily.csv,source_record_id,organization_id,Daily channel traffic and conversions
+stripe_customers.csv,customer_id,"organization_id, company_id",Billing customers
+stripe_subscriptions.csv,subscription_id,"organization_id, customer_id","Plans, MRR, subscription status"
+stripe_payments.csv,payment_id,"organization_id, customer_id, subscription_id","Cash collection, failures, refunds"
+quickbooks_invoices.csv,invoice_id,"organization_id, customer_id",Accounting invoices
+quickbooks_expenses.csv,expense_id,organization_id,Operating expenses
+support_tickets.csv,ticket_id,"organization_id, customer_id","Support load, response, resolution and CSAT"
+metric_definitions.csv,metric_key,,Canonical metric definitions
