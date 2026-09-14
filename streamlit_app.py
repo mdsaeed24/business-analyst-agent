@@ -5,6 +5,7 @@ from pathlib import Path
 import streamlit as st
 
 st.set_page_config(page_title="Business Analyst Agent", page_icon="📊", layout="wide")
+st.markdown("<style>[data-testid=stMetricValue] {font-size: 1.35rem;} [data-testid=stMetricLabel] {min-height: 2.8em;}</style>", unsafe_allow_html=True)
 ROOT = Path(__file__).resolve().parent
 snapshot = json.loads((ROOT / "showcase/snapshot.json").read_text())
 if snapshot.get("demo") is not True:
