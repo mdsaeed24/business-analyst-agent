@@ -4,6 +4,8 @@ A portfolio analytics application built around realistic synthetic business data
 
 **Demo data only:** the included organizations, contacts, transactions and support records are synthetic. A real Stripe account is not required. The Stripe connector is implemented and tested with simulated provider responses; real-account synchronization is not verified.
 
+**[Open the public demo](https://sayeed-business-analyst.streamlit.app/)** · [Source code](https://github.com/mdsaeed24/business-analyst-agent)
+
 ## Public Streamlit showcase
 
 `streamlit_app.py` is a separate read-only companion for Streamlit Community Cloud. It shows validated July/August 2026 synthetic metric comparisons, charts, evidence summaries and deterministic investigation findings. It needs no database or API keys. The full Next.js application remains below and is not executed by Streamlit. Authentication, live sync, AI explanation generation and voice generation belong to that full application.

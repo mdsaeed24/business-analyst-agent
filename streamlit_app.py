@@ -56,14 +56,14 @@ if page in sections:
         delta = finding.get("delta") if m["unit"] == "percent" else finding.get("relativePercent")
         suffix = " pp" if m["unit"] == "percent" else "%"
         with column:
-            st.metric(m["name"], display(m["current"]["value"], m["unit"]), None if delta is None else f"{delta}{suffix}", delta_color="off", border=True)
+            st.metric(m["name"], display(m["current"]["value"], m["unit"]), None if delta is None else f"{Decimal(delta):+.2f}{suffix}", delta_color="off", border=True)
     st.subheader("Period comparisons")
     for column, key in zip(st.columns(min(3, len(keys))), keys[:3]):
         m = metrics[key]
         with column:
             st.markdown(f"**{m['name']}**")
-            st.bar_chart({"Period": [snapshot["baseline"], snapshot["current"]], "Value": [None if m[p]["value"] is None else float(m[p]["value"]) for p in ["baseline", "current"]]}, x="Period", y="Value", color="#8460d1", height=260)
-            st.caption(f"July: {display(m['baseline']['value'], m['unit'])} · August: {display(m['current']['value'], m['unit'])}")
+            st.bar_chart({"Period": [snapshot["baseline"], snapshot["current"]], "Value": [None if m[p]["value"] is None else float(m[p]["value"]) for p in ["baseline", "current"]]}, x="Period", y="Value", color="#8460d1", height=260, sort=False)
+            st.text(f"July: {display(m['baseline']['value'], m['unit'])} · August: {display(m['current']['value'], m['unit'])}")
     st.subheader("Explore the evidence")
     for key in keys:
         m = metrics[key]
